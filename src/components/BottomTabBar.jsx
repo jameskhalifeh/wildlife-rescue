@@ -10,7 +10,7 @@ const ADMIN_TABS = [
   { name: 'Dashboard',   icon: 'grid-outline',         activeIcon: 'grid',          route: 'Home' },
   { name: 'New Mission', icon: 'add-circle-outline',   activeIcon: 'add-circle',    route: 'NewMission' },
   { name: 'Volunteers',  icon: 'people-outline',       activeIcon: 'people',        route: 'Volunteers' },
-  { name: 'Reports',     icon: 'document-text-outline',activeIcon: 'document-text', route: 'Home' },
+  { name: 'Reports',     icon: 'document-text-outline',activeIcon: 'document-text', route: 'Reports' },
   { name: 'Admin',       icon: 'shield-outline',       activeIcon: 'shield',        route: 'Admin' },
 ];
 
