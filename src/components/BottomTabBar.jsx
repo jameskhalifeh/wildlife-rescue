@@ -15,9 +15,8 @@ const ADMIN_TABS = [
 ];
 
 const VOLUNTEER_TABS = [
-  { name: 'Missions', icon: 'flag-outline',    activeIcon: 'flag',    route: 'VolunteerHome' },
-  { name: 'Report',   icon: 'warning-outline', activeIcon: 'warning', route: 'ReportAnimal' },
-  { name: 'Profile',  icon: 'person-outline',  activeIcon: 'person',  route: 'Profile' },
+  { name: 'Missions', icon: 'flag-outline',   activeIcon: 'flag',   route: 'VolunteerHome' },
+  { name: 'Profile',  icon: 'person-outline', activeIcon: 'person', route: 'Profile' },
 ];
 
 export default function BottomTabBar({ navigation, activeTab = 'Dashboard' }) {
