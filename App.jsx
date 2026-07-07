@@ -16,6 +16,7 @@ import AdminScreen from './src/screens/AdminScreen';
 import VolunteerHomeScreen from './src/screens/VolunteerHomeScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
 import ReportsScreen from './src/screens/ReportsScreen';
+import ReportAnimalScreen from './src/screens/ReportAnimalScreen';
 
 const Stack = createNativeStackNavigator();
 const OPTS = { headerShown: false, animation: 'slide_from_right', gestureEnabled: false };
@@ -54,6 +55,7 @@ export default function App() {
               <>
                 <Stack.Screen name="VolunteerHome"  component={VolunteerHomeScreen} />
                 <Stack.Screen name="MissionDetails" component={MissionDetailsScreen} />
+                <Stack.Screen name="ReportAnimal"   component={ReportAnimalScreen} />
                 <Stack.Screen name="Profile"        component={ProfileScreen} />
               </>
             )}
