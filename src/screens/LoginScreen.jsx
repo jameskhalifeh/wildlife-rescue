@@ -9,32 +9,35 @@ import { colors } from '../theme/colors';
 import { loginStyles as styles } from '../theme/styles';
 import { useAuth } from '../context/AuthContext';
 
-const ADMIN_CODE = 'WILD2024';
-
 export default function LoginScreen({ navigation }) {
   const { login } = useAuth();
   const [tab, setTab] = useState('volunteer');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [showPass, setShowPass] = useState(false);
-  const [code, setCode] = useState('');
+
+  const [volEmail, setVolEmail]       = useState('');
+  const [volPassword, setVolPassword] = useState('');
+  const [showVolPass, setShowVolPass] = useState(false);
+
+  const [adminEmail, setAdminEmail]       = useState('');
+  const [adminPassword, setAdminPassword] = useState('');
+  const [showAdminPass, setShowAdminPass] = useState(false);
+
   const [error, setError] = useState('');
 
   function handleVolunteerLogin() {
-    if (!email.trim() || !password.trim()) {
+    if (!volEmail.trim() || !volPassword.trim()) {
       setError('Please enter your email and password.');
       return;
     }
-    const name = email.split('@')[0].replace(/[._]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-    login('volunteer', { name, email: email.trim() });
+    const name = volEmail.split('@')[0].replace(/[._]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    login('volunteer', { name, email: volEmail.trim() });
   }
 
   function handleAdminLogin() {
-    if (code.trim() !== ADMIN_CODE) {
-      setError('Invalid admin code. Please try again.');
+    if (!adminEmail.trim() || !adminPassword.trim()) {
+      setError('Please enter your email and password.');
       return;
     }
-    login('admin', { name: 'Admin' });
+    login('admin', { name: 'Admin', email: adminEmail.trim() });
   }
 
   function switchTab(t) {
@@ -91,8 +94,8 @@ export default function LoginScreen({ navigation }) {
                     style={styles.textInput}
                     placeholder="your@email.com"
                     placeholderTextColor={colors.textMuted}
-                    value={email}
-                    onChangeText={t => { setEmail(t); setError(''); }}
+                    value={volEmail}
+                    onChangeText={t => { setVolEmail(t); setError(''); }}
                     keyboardType="email-address"
                     autoCapitalize="none"
                   />
@@ -107,12 +110,12 @@ export default function LoginScreen({ navigation }) {
                     style={styles.textInput}
                     placeholder="••••••••"
                     placeholderTextColor={colors.textMuted}
-                    value={password}
-                    onChangeText={t => { setPassword(t); setError(''); }}
-                    secureTextEntry={!showPass}
+                    value={volPassword}
+                    onChangeText={t => { setVolPassword(t); setError(''); }}
+                    secureTextEntry={!showVolPass}
                   />
-                  <TouchableOpacity onPress={() => setShowPass(v => !v)} style={styles.eyeBtn}>
-                    <Ionicons name={showPass ? 'eye-off-outline' : 'eye-outline'} size={18} color={colors.textMuted} />
+                  <TouchableOpacity onPress={() => setShowVolPass(v => !v)} style={styles.eyeBtn}>
+                    <Ionicons name={showVolPass ? 'eye-off-outline' : 'eye-outline'} size={18} color={colors.textMuted} />
                   </TouchableOpacity>
                 </View>
               </View>
@@ -134,29 +137,45 @@ export default function LoginScreen({ navigation }) {
           {tab === 'admin' && (
             <View>
               <Text style={styles.formTitle}>Admin Access</Text>
-              <Text style={styles.formSub}>Enter your secure admin code to continue</Text>
+              <Text style={styles.formSub}>Sign in with your admin credentials</Text>
 
               <View style={styles.fieldGroup}>
-                <Text style={styles.fieldLabel}>Admin Code</Text>
+                <Text style={styles.fieldLabel}>Email</Text>
                 <View style={styles.inputRow}>
-                  <Ionicons name="key-outline" size={18} color={colors.textMuted} style={styles.inputIcon} />
+                  <Ionicons name="mail-outline" size={18} color={colors.textMuted} style={styles.inputIcon} />
                   <TextInput
                     style={styles.textInput}
-                    placeholder="Enter admin code"
+                    placeholder="admin@wildlife.lb"
                     placeholderTextColor={colors.textMuted}
-                    value={code}
-                    onChangeText={t => { setCode(t); setError(''); }}
-                    secureTextEntry
-                    autoCapitalize="characters"
+                    value={adminEmail}
+                    onChangeText={t => { setAdminEmail(t); setError(''); }}
+                    keyboardType="email-address"
+                    autoCapitalize="none"
                   />
+                </View>
+              </View>
+
+              <View style={styles.fieldGroup}>
+                <Text style={styles.fieldLabel}>Password</Text>
+                <View style={styles.inputRow}>
+                  <Ionicons name="lock-closed-outline" size={18} color={colors.textMuted} style={styles.inputIcon} />
+                  <TextInput
+                    style={styles.textInput}
+                    placeholder="••••••••"
+                    placeholderTextColor={colors.textMuted}
+                    value={adminPassword}
+                    onChangeText={t => { setAdminPassword(t); setError(''); }}
+                    secureTextEntry={!showAdminPass}
+                  />
+                  <TouchableOpacity onPress={() => setShowAdminPass(v => !v)} style={styles.eyeBtn}>
+                    <Ionicons name={showAdminPass ? 'eye-off-outline' : 'eye-outline'} size={18} color={colors.textMuted} />
+                  </TouchableOpacity>
                 </View>
               </View>
 
               <TouchableOpacity style={styles.primaryBtn} onPress={handleAdminLogin} activeOpacity={0.85}>
                 <Text style={styles.primaryBtnText}>Login as Admin</Text>
               </TouchableOpacity>
-
-              <Text style={styles.codeHint}>Demo code: WILD2024</Text>
             </View>
           )}
 
