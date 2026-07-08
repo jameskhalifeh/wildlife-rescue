@@ -2375,3 +2375,171 @@ export const reportAnimalStyles = StyleSheet.create({
     color: colors.textSecondary,
   },
 });
+export const sendalertstyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: colors.background
+  },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 16,
+    paddingVertical: 12
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: '700',
+    color: colors.textPrimary
+  },
+  subtitle: {
+    fontSize: 13,
+    color: colors.textSecondary,
+    marginTop: 2
+  },
+  scroll: {
+    paddingHorizontal: 16,
+    paddingBottom: 32
+  },
+  card: {
+    backgroundColor: colors.card ?? '#fff',
+    borderRadius: 14,
+    padding: 16,
+    marginBottom: 16,
+    borderWidth: 1,
+    borderColor: colors.border
+  },
+  sectionTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: colors.textPrimary,
+    marginBottom: 12
+  },
+  label: {
+    fontSize: 13,
+    fontWeight: '500',
+    color: colors.textSecondary,
+    marginBottom: 6,
+    marginTop: 10
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: 10,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    fontSize: 15,
+    color: colors.textPrimary
+  },
+  textArea: {
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: 10,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    fontSize: 15,
+    color: colors.textPrimary,
+    minHeight: 100,
+    textAlignVertical: 'top'
+  },
+  counter: {
+    alignSelf: 'flex-end',
+    fontSize: 12,
+    color: colors.textMuted,
+    marginTop: 4
+  },
+  pillRow: {
+    flexDirection: 'row',
+    marginTop: 4
+  },
+  pill: {
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: colors.border,
+    marginRight: 8
+  },
+  pillText: {
+    fontSize: 13,
+    color: colors.textSecondary,
+    fontWeight: '500'
+  },
+  pillTextActive: {
+    color: colors.card ?? '#fff'
+  },
+  selectBox: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: 10,
+    paddingHorizontal: 12,
+    paddingVertical: 12,
+    marginBottom: 10
+  },
+  selectText: {
+    fontSize: 15,
+    color: colors.textPrimary
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.25)',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  dropdownMenu: {
+    width: '80%',
+    backgroundColor: colors.card ?? '#fff',
+    borderRadius: 12,
+    paddingVertical: 6,
+    borderWidth: 1,
+    borderColor: colors.border
+  },
+  dropdownItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 16,
+    paddingVertical: 14
+  },
+  dropdownItemText: {
+    fontSize: 15,
+    color: colors.textPrimary
+  },
+  dropdownItemTextActive: {
+    fontWeight: '600',
+    color: colors.tabActive
+  },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingVertical: 10
+  },
+  rowLeft: {
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  rowText: {
+    fontSize: 15,
+    color: colors.textPrimary,
+    marginLeft: 10
+  },
+  sendButton: {
+    backgroundColor: colors.tabActive,
+    borderRadius: 12,
+    paddingVertical: 16,
+    alignItems: 'center',
+    marginTop: 8
+  },
+  sendButtonDisabled: {
+    opacity: 0.5
+  },
+  sendButtonText: {
+    color: colors.card ?? '#fff',
+    fontSize: 16,
+    fontWeight: '600'
+  }
+  
+});

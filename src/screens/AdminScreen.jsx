@@ -20,8 +20,8 @@ const OVERVIEW = [
 const QUICK_ACTIONS = [
   { label: 'Create Mission',       icon: 'add-circle-outline',    route: 'NewMission',  bg: colors.primaryBtn },
   { label: 'Manage Volunteers',    icon: 'people-outline',        route: 'Volunteers',  bg: '#1e3a6a' },
-  { label: 'View Reports',         icon: 'bar-chart-outline',     route: null,          bg: '#3a2d6a' },
-  { label: 'Send Alert',           icon: 'notifications-outline', route: null,          bg: '#6a2d2d' },
+  { label: 'View Reports',         icon: 'bar-chart-outline',     route: 'Reports',     bg: '#3a2d6a' },
+  { label: 'Send Alert',           icon: 'notifications-outline', route: 'SendAlert',   bg: '#6a2d2d' },
 ];
 
 const PENDING = [
