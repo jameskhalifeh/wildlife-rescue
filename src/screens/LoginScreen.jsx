@@ -56,7 +56,7 @@ export default function LoginScreen({ navigation }) {
             <View style={styles.logoCircle}>
               <Text style={styles.logoEmoji}>🐾</Text>
             </View>
-            <Text style={styles.appName}>Wildlife Rescue</Text>
+            <Text style={styles.appName}>Lebanese WildLife</Text>
             <Text style={styles.appSub}>Lebanon</Text>
           </View>
 

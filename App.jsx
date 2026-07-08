@@ -45,7 +45,7 @@ export default function App() {
                 <Stack.Screen name="Home"             component={HomeScreen} />
                 <Stack.Screen name="NewMission"       component={NewMissionScreen} />
                 <Stack.Screen name="MissionDetails"   component={MissionDetailsScreen} />
-                <Stack.Screen name="MissionTracking"  component={MissionTrackingScreen} />
+                <Stack.Screen name="MissionTracking"  component={MissionTrackingScreen} /> 
                 <Stack.Screen name="MissionCompleted" component={MissionCompletedScreen} />
                 <Stack.Screen name="Volunteers"       component={VolunteersScreen} />
                 <Stack.Screen name="Admin"            component={AdminScreen} />

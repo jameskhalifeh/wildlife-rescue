@@ -35,7 +35,7 @@ const DATA_BY_PERIOD = {
       { label: 'Success Rate', value: '96%', icon: 'trending-up-outline', color: colors.high },
     ],
     chart: [
-      { label: 'Wk 1', value: 70 }, { label: 'Wk 2', value: 85 }, { label: 'Wk 3', value: 60 }, { label: 'Wk 4', value: 95 },
+      { label: 'W', value: 70 }, { label: 'W', value: 85 }, { label: 'W', value: 60 }, { label: 'W', value: 95 },
     ],
     reports: [
       { id: 4, title: 'June Monthly Report', date: 'Jul 1, 2026', type: 'PDF', icon: 'document-text' },
